@@ -158,7 +158,7 @@ void print_rect(const struct colour *col, const struct rectangle *rect) {
 
 	for (int y = 0; y < rect->h; y++) {
 
-		printf(escape);
+		printf("%s", escape);
 		for (int x = 0; x < rect->w; x++)
 			printf(block_utf8);
 		printf("%s\n", reset_seq);
@@ -207,16 +207,17 @@ int main(int argc, char **argv) {
 				print_help();
 				return 0;
 				break;
-				
 
-			case 'r':
+			case 'r': {
 				int ret = parse_rect_arg(&rect, optarg);
 				if (ret != SUCCESS)
 					return ret;
 				break;
+			}
 
 			case '?':
 				return ERROR_ARGUNKNOWN;
+				break;
 
 			default:
 				break;
