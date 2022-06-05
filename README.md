@@ -20,4 +20,4 @@ This program is only compatible with terminals which support true 24 bit colour
   Eg hexcol -r 40x6 005bbb 0xFFD500
 ```
 
-![Preview Image](https://github.com/pyfon/hexcol/blob/main/png/md.png)
+![Preview Image](https://github.com/pyfon/hexcol/blob/master/png/md.png)
