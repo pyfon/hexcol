@@ -43,7 +43,13 @@ void signal_handler(int signal) {
 
 void print_help() {
 
-	puts("help.");
+	printf("Usage:\n\
+  hexcol [options] [colours...]\n\n\
+  -r, --rectange <Width>[xHeight]\tDefine colour rectangle dimensions\n\
+  -h, --help\t\t\t\tPrint this help message and exit\n\n\
+  [colours...] are a list of one or more 24-bit hex colour codes.\n\
+  Codes can be optionally prefixed with '0x' or '#'.\n\
+  Eg hexcol -r 40x6 005bbb 0xFFD500\n");
 
 }
 
